@@ -6,8 +6,8 @@
 .container {
   max-width: 50rem;
   margin: 0 auto;
-  padding: 1rem;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1)); 
+  padding: auto;
 }
 
 h1 {
@@ -18,14 +18,14 @@ h1 {
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 0.5px;
+  padding: auto;
 }
 
 .card {
   background: white;
   border-radius: 0.5rem; 
-  padding: 2rem 2rem 2rem; 
+  padding: 1.25rem; 
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.25rem;
   max-width: 100%;
 }
 
@@ -40,6 +40,7 @@ input {
   border: 0.0625rem solid #ddd; 
   border-radius: 0.25rem; 
   font-size: 1rem;
+  
 }
 
 button {
@@ -61,7 +62,7 @@ button:hover {
   flex-direction: column;
   gap: 1.25rem; 
   margin: 0 auto;
-  padding: 1rem 1rem 8rem;
+  padding: 1rem 1rem;
   max-width: 100%;
 }
 
