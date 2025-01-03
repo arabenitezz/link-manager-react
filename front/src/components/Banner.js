@@ -1,8 +1,4 @@
 import React from "react";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTags, faComments, faVoteYea } from '@fortawesome/free-solid-svg-icons';
-
 import backgroundImage from './static/fondo.jpg';
 
 const Banner = () => {
@@ -17,20 +13,6 @@ const Banner = () => {
           <p className="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Link Manager Pro te permite organizar y compartir tus enlaces favoritos de manera eficiente. Guarda, categoriza y comenta los recursos más importantes para ti.
           </p>
-          <div className="mt-5 sm:flex md:mt-8 gap-2">
-            <div className="feature-item flex items-center gap-2 p-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg shadow-lg mt-2">
-              <FontAwesomeIcon icon={faTags} />
-              <span>Organiza con etiquetas</span>
-            </div>
-            <div className="feature-item flex items-center gap-2 p-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg shadow-lg mt-2">
-              <FontAwesomeIcon icon={faComments} />
-              <span>Comenta y comparte</span>
-            </div>
-            <div className="feature-item flex items-center gap-2 p-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg shadow-lg mt-2">
-              <FontAwesomeIcon icon={faVoteYea} />
-              <span>Vota los mejores enlaces</span>
-            </div>
-          </div>
         </div>
       </div>
       <div className="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
