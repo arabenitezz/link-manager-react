@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Banner from './components/Banner';
 
 const API_URL = 'http://localhost:5000/api';
 
@@ -85,7 +84,6 @@ const App = () => {
     <body>
     <Header />
     <div className="container">
-    <Banner />
       <div className="card">
         <h2>Añadir nuevo enlace</h2>
         <form onSubmit={handleSubmitLink} className="form">
