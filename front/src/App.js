@@ -90,99 +90,97 @@ const App = () => {
   };
 
   return (
-    <body>
-    <Header />
-    <Banner />
-    <div className="container">
+    <div className="app">
+      <Header />
+      <Banner />
+      <div className="container">
+        <h1>Añadir nuevo enlace</h1>
+        <div className="card">
+          <form onSubmit={handleSubmitLink} className="form">
+            <input
+              type="text"
+              placeholder="Título"
+              value={newLink.title}
+              onChange={(e) => setNewLink({...newLink, title: e.target.value})}
+            />
+            <input
+              type="url"
+              placeholder="URL"
+              value={newLink.url}
+              onChange={(e) => setNewLink({...newLink, url: e.target.value})}
+            />
+            <input
+              type="text"
+              placeholder="Tags (separados por comas)"
+              value={newLink.tags}
+              onChange={(e) => setNewLink({...newLink, tags: e.target.value})}
+            />
+            <button type="submit">Añadir enlace</button>
+          </form>
+        </div>
 
-    <h1>Añadir nuevo enlace</h1>
-      <div className="card">
-        
-        <form onSubmit={handleSubmitLink} className="form">
-          <input
-            type="text"
-            placeholder="Título"
-            value={newLink.title}
-            onChange={(e) => setNewLink({...newLink, title: e.target.value})}
-          />
-          <input
-            type="url"
-            placeholder="URL"
-            value={newLink.url}
-            onChange={(e) => setNewLink({...newLink, url: e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Tags (separados por comas)"
-            value={newLink.tags}
-            onChange={(e) => setNewLink({...newLink, tags: e.target.value})}
-          />
-          <button type="submit">Añadir enlace</button>
-        </form>
-      </div>
+        <h1>Lista de enlaces</h1>
 
-      <h1>Lista de enlaces</h1>
-
-      <div className="links-container">
-        {links.map(link => (
-          <div key={link._id} className="link-card">
-            <div className="link-content">
-              <div className="link-info">
-                <h2>{link.title}</h2>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  {link.url}
-                </a>
-                <div className="tags">
-                  {link.tags?.map(tag => (
-                    <span key={tag} className="tag">
-                      {tag}
-                    </span>
-                  ))}
+        <div className="links-container">
+          {links.map(link => (
+            <div key={link._id} className="link-card">
+              <div className="link-content">
+                <div className="link-info">
+                  <h2>{link.title}</h2>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.url}
+                  </a>
+                  <div className="tags">
+                    {link.tags?.map(tag => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="vote-section">
+                  <button onClick={() => handleVote(link._id, 'up')}>
+                    <FontAwesomeIcon icon={faCircleUp} />
+                  </button>
+                  <span className="vote-count">{link.votes || 0}</span>
+                  <button onClick={() => handleVote(link._id, 'down')}>
+                    <FontAwesomeIcon icon={faCircleDown} />
+                  </button>
+                  <button onClick={() => setSelectedLink(link)}>
+                    <FontAwesomeIcon icon={faComment} />
+                  </button>
                 </div>
               </div>
-              <div className="vote-section">
-                <button onClick={() => handleVote(link._id, 'up')}>
-                  <FontAwesomeIcon icon={faCircleUp} />
-                </button>
-                <span className="vote-count">{link.votes || 0}</span>
-                <button onClick={() => handleVote(link._id, 'down')}>
-                  <FontAwesomeIcon icon={faCircleDown} />
-                </button>
-                <button onClick={() => setSelectedLink(link)}>
-                  <FontAwesomeIcon icon={faComment} />
-                </button>
-              </div>
+              {selectedLink?._id === link._id && (
+                <div className="comments-section">
+                  <h3>Comentarios</h3>
+                  <form onSubmit={handleSubmitComment} className="comment-form">
+                    <input
+                      type="text"
+                      placeholder="Añadir comentario"
+                      value={newComment.text}
+                      onChange={(e) => setNewComment({
+                        text: e.target.value,
+                        linkId: link._id
+                      })}
+                    />
+                    <button type="submit">Comentar</button>
+                  </form>
+                  <div className="comments-list">
+                    {selectedLink.comments?.map(comment => (
+                      <div key={comment._id} className="comment">
+                        {comment.text}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-            {selectedLink?._id === link._id && (
-              <div className="comments-section">
-                <h3>Comentarios</h3>
-                <form onSubmit={handleSubmitComment} className="comment-form">
-                  <input
-                    type="text"
-                    placeholder="Añadir comentario"
-                    value={newComment.text}
-                    onChange={(e) => setNewComment({
-                      text: e.target.value,
-                      linkId: link._id
-                    })}
-                  />
-                  <button type="submit">Comentar</button>
-                </form>
-                <div className="comments-list">
-                  {selectedLink.comments?.map(comment => (
-                    <div key={comment._id} className="comment">
-                      {comment.text}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+      <Footer />
     </div>
-  <Footer />  
-    </body>
   );
 };
 
