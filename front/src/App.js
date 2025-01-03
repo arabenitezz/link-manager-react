@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Banner from './components/Banner';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faCircleUp, 
+  faCircleDown, 
+  faComment 
+} from '@fortawesome/free-solid-svg-icons';
 
 const API_URL = 'http://localhost:5000/api';
 
@@ -83,9 +92,12 @@ const App = () => {
   return (
     <body>
     <Header />
+    <Banner />
     <div className="container">
+
+    <h1>Añadir nuevo enlace</h1>
       <div className="card">
-        <h2>Añadir nuevo enlace</h2>
+        
         <form onSubmit={handleSubmitLink} className="form">
           <input
             type="text"
@@ -129,13 +141,18 @@ const App = () => {
                 </div>
               </div>
               <div className="vote-section">
-                <button onClick={() => handleVote(link._id, 'up')}>👍</button>
+                <button onClick={() => handleVote(link._id, 'up')}>
+                  <FontAwesomeIcon icon={faCircleUp} />
+                </button>
                 <span className="vote-count">{link.votes || 0}</span>
-                <button onClick={() => handleVote(link._id, 'down')}>👎</button>
-                <button onClick={() => setSelectedLink(link)}>💬</button>
+                <button onClick={() => handleVote(link._id, 'down')}>
+                  <FontAwesomeIcon icon={faCircleDown} />
+                </button>
+                <button onClick={() => setSelectedLink(link)}>
+                  <FontAwesomeIcon icon={faComment} />
+                </button>
               </div>
             </div>
-
             {selectedLink?._id === link._id && (
               <div className="comments-section">
                 <h3>Comentarios</h3>

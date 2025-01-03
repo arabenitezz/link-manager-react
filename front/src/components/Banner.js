@@ -1,41 +1,50 @@
 import React from "react";
-import miGif from "./static/share-link.gif";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTags, faComments, faVoteYea } from '@fortawesome/free-solid-svg-icons';
+
+import backgroundImage from './static/fondo.jpg';
 
 const Banner = () => {
   return (
-    <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
-        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-          <div class="mx-auto max-w-xl max-h-xs text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit
-            </h2>
-      
-            <p class="hidden text-gray-500 md:mt-4 md:block">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
-              sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-              quisque ut interdum tincidunt duis.
-            </p>
-      
-            <div class="mt-4 md:mt-8">
-              <a
-                href="#"
-                class="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
-              >
-                Get Started Today
-              </a>
+    <div className="relative flex flex-col items-center max-w-screen-lg px-4 mx-auto md:flex-row sm:px-6 p-8">
+      <div className="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
+        <div className="text-left">
+          <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-800 sm:text-5xl sm:leading-none md:text-6xl">
+            LinkManager 
+            <span className="font-bold text-blue-500">Pro</span>
+          </h2>
+          <p className="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            Link Manager Pro te permite organizar y compartir tus enlaces favoritos de manera eficiente. Guarda, categoriza y comenta los recursos más importantes para ti.
+          </p>
+          <div className="mt-5 sm:flex md:mt-8 gap-2">
+            <div className="feature-item flex items-center gap-2 p-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg shadow-lg mt-2">
+              <FontAwesomeIcon icon={faTags} />
+              <span>Organiza con etiquetas</span>
+            </div>
+            <div className="feature-item flex items-center gap-2 p-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg shadow-lg mt-2">
+              <FontAwesomeIcon icon={faComments} />
+              <span>Comenta y comparte</span>
+            </div>
+            <div className="feature-item flex items-center gap-2 p-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg shadow-lg mt-2">
+              <FontAwesomeIcon icon={faVoteYea} />
+              <span>Vota los mejores enlaces</span>
             </div>
           </div>
         </div>
-      
-        <div className="h-48 w-full overflow-hidden">
-        <img
-          src={miGif}
-          alt="Animación"
-          className="h-full w-full object-cover"
-        />
       </div>
-      </section>
-
+      <div className="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
+        <div className="relative w-full p-3 rounded md:p-8">
+          <div className="rounded-lg bg-white text-black w-full ">
+            <img 
+              src={backgroundImage} 
+              alt="Link Manager Pro background"
+              className="rounded-lg w-full h-[320px] shadow-lg shadow-blue-500/40"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

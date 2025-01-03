@@ -6,21 +6,26 @@
 .container {
   max-width: 50rem;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 h1 {
   text-align: center;
-  color: #333;
-  margin-bottom: 1.875rem; 
+  color: #1a1a1a;
+  margin-bottom: 1.875rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
 
 .card {
   background: white;
   border-radius: 0.5rem; 
-  padding: 1.25rem; 
+  padding: 2rem 2rem 2rem; 
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   margin-bottom: 1.25rem;
+  max-width: 100%;
 }
 
 .form {
@@ -54,6 +59,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 1.25rem; 
+  margin: 0 auto;
+  padding: 1rem 1rem 8rem;
+  max-width: 100%;
 }
 
 .link-card {
@@ -61,6 +69,7 @@ button:hover {
   border-radius: 0.5rem; 
   padding: 1.25rem; 
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 }
 
 .link-content {
@@ -114,11 +123,17 @@ button:hover {
   font-size: 1.25rem;
   cursor: pointer;
   padding: 0.25rem;
+  color:  #0066cc; /* Añadido para hacer visible el ícono */
+  display: flex; /* Añadido para centrar el ícono */
+  align-items: center;
+  justify-content: center;
 }
 
+
 .vote-section button:hover {
-  background: #f0f0f0;
-  border-radius: 0.25rem; 
+
+  border-radius: 0.25rem;
+  color: #0052a3; /* Color al hacer hover */
 }
 
 .vote-count {
