@@ -27,9 +27,7 @@ const Banner2 = () => {
               ¿Qué esperas para agregar tu primer link?
             </h2>
             <p className="mt-6 max-w-lg leading-relaxed text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus
-              sapiente commodi. Aliquid sunt tempore iste repellendus explicabo dignissimos placeat,
-              autem harum dolore reprehenderit quis! Quo totam dignissimos earum.
+           Empieza a construir tu biblioteca de recursos de programación con CodeLinker Pro. Guarda enlaces a guías, documentación oficial, videos tutoriales o herramientas útiles que te acompañarán en tus proyectos. ¿Buscas mejorar tus habilidades o colaborar con otros programadores? ¡Organiza tu contenido y comparte tus mejores recursos desde hoy!
             </p>
           </div>
         </div>
