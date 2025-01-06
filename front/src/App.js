@@ -95,6 +95,7 @@ const App = () => {
       <Header />
       <Banner />
       <div className="container">
+      <i class="fas fa-plus-circle"></i>
         <h1>Añadir nuevo enlace</h1>
         <div className="card">
           <form onSubmit={handleSubmitLink} className="form">
@@ -119,7 +120,7 @@ const App = () => {
             <button type="submit">Añadir enlace</button>
           </form>
         </div>
-
+        <i class="fas fa-list"></i>
         <h1>Lista de enlaces</h1>
 
         <div className="links-container">
