@@ -10,7 +10,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faCircleUp, 
   faCircleDown, 
-  faComment 
+  faComment,
+  faPlusCircle,
+  faList 
 } from '@fortawesome/free-solid-svg-icons';
 
 const API_URL = 'http://localhost:5000/api';
@@ -96,7 +98,9 @@ const App = () => {
       <Banner />
       <div className="container">
       <i class="fas fa-plus-circle"></i>
-        <h1>Añadir nuevo enlace</h1>
+        <h1>
+          <FontAwesomeIcon icon={faPlusCircle} /> Añadir nuevo enlace
+        </h1>
         <div className="card">
           <form onSubmit={handleSubmitLink} className="form">
             <input
@@ -121,7 +125,9 @@ const App = () => {
           </form>
         </div>
         <i class="fas fa-list"></i>
-        <h1>Lista de enlaces</h1>
+        <h1>
+          <FontAwesomeIcon icon={faList} /> Lista de enlaces
+        </h1>
 
         <div className="links-container">
           {links.map(link => (
