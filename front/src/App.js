@@ -104,22 +104,6 @@ const App = () => {
       <Header />
       <Banner />
       <div className="container">
-      <i class="fas fa-filter"></i>
-        <h1>
-          <FontAwesomeIcon icon={faFilter} /> Buscar por etiquetas
-        </h1>
-        <div className="search-section">
-          <form onSubmit={handleSearch} className="search-form">
-            <input
-              type="text"
-              placeholder="Buscar por etiquetas (separadas por comas)"
-              value={searchTags}
-              onChange={(e) => setSearchTags(e.target.value)}
-              className="search-input"
-            />
-            <button type="submit">Buscar</button>
-          </form>
-        </div>
         <i class="fas fa-plus-circle"></i>
         <h1>
           <FontAwesomeIcon icon={faPlusCircle} /> Añadir nuevo enlace
@@ -145,6 +129,22 @@ const App = () => {
               onChange={(e) => setNewLink({...newLink, tags: e.target.value})}
             />
             <button type="submit">Añadir enlace</button>
+          </form>
+        </div>
+        <i class="fas fa-filter"></i>
+        <h1>
+          <FontAwesomeIcon icon={faFilter} /> Buscar por etiquetas
+        </h1>
+        <div className="search-section">
+          <form onSubmit={handleSearch} className="search-form">
+            <input
+              type="text"
+              placeholder="Buscar por etiquetas (separadas por comas)"
+              value={searchTags}
+              onChange={(e) => setSearchTags(e.target.value)}
+              className="search-input"
+            />
+            <button type="submit">Buscar</button>
           </form>
         </div>
         <i class="fas fa-list"></i>
