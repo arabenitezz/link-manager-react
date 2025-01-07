@@ -12,7 +12,8 @@ import {
   faCircleDown, 
   faComment,
   faPlusCircle,
-  faList 
+  faList,
+  faFilter
 } from '@fortawesome/free-solid-svg-icons';
 
 const API_URL = 'http://localhost:5000/api';
@@ -22,19 +23,25 @@ const App = () => {
   const [newLink, setNewLink] = useState({ title: '', url: '', tags: '' });
   const [newComment, setNewComment] = useState({ text: '', linkId: '' });
   const [selectedLink, setSelectedLink] = useState(null);
+  const [searchTags, setSearchTags] = useState('');
 
   useEffect(() => {
     fetchLinks();
   }, []);
 
-  const fetchLinks = async () => {
+  const fetchLinks = async (tags = '') => {
     try {
-      const response = await fetch(`${API_URL}/links`);
+      const response = await fetch(`${API_URL}/links${tags ? `?tags=${tags}` : ''}`);
       const data = await response.json();
       setLinks(data);
     } catch (error) {
       console.error('Error fetching links:', error);
     }
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    fetchLinks(searchTags);
   };
 
   const handleSubmitLink = async (e) => {
@@ -97,7 +104,23 @@ const App = () => {
       <Header />
       <Banner />
       <div className="container">
-      <i class="fas fa-plus-circle"></i>
+      <i class="fas fa-filter"></i>
+        <h1>
+          <FontAwesomeIcon icon={faFilter} /> Buscar por etiquetas
+        </h1>
+        <div className="search-section">
+          <form onSubmit={handleSearch} className="search-form">
+            <input
+              type="text"
+              placeholder="Buscar por etiquetas (separadas por comas)"
+              value={searchTags}
+              onChange={(e) => setSearchTags(e.target.value)}
+              className="search-input"
+            />
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+        <i class="fas fa-plus-circle"></i>
         <h1>
           <FontAwesomeIcon icon={faPlusCircle} /> Añadir nuevo enlace
         </h1>
