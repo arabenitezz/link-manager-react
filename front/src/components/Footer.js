@@ -38,7 +38,7 @@ const Footer = () => {
                         className="text-3xl text-blue-600"
                       />
           <span className="text-3xl font-bold text-blue-600">
-            LinkManagerPro
+          ProCodeTube
           </span>
         </div>
         </a>

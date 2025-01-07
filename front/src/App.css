@@ -172,6 +172,8 @@ button:hover {
 
 .search-section {
   margin: 20px 0;
+  max-width: 100%;
+  margin: 0 1rem 2rem;
 }
 
 .search-form {
