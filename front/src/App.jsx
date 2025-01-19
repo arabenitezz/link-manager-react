@@ -16,7 +16,7 @@ import {
   faFilter
 } from '@fortawesome/free-solid-svg-icons';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://link-manager-backend-production.up.railway.app/api';
 
 const App = () => {
   const [links, setLinks] = useState([]);
