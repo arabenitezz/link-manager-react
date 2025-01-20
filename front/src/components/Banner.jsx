@@ -18,6 +18,7 @@ const Banner = () => (
           width="100%"
           height="400"
           allowFullScreen
+          title="Example Website"
         />
     </div>
 </div>
