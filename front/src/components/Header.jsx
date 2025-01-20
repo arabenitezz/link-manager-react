@@ -9,7 +9,7 @@ const Header = () => {
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div className="flex h-16 items-center justify-between">
       <div className="md:flex md:items-center md:gap-12">
-        <a className="block text-teal-600" href="#">
+        <a className="block text-teal-600" href="https://github.com/arabenitezz">
           <span className="sr-only">Home</span>
             <FontAwesomeIcon
               icon={faLink}
@@ -22,15 +22,15 @@ const Header = () => {
         <nav aria-label="Global">
           <ul className="flex items-center gap-6 text-sm">
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Únete a la Comunidad </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="https://github.com/arabenitezz"> Únete a la Comunidad </a>
             </li>
 
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Invítanos un café </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="https://github.com/arabenitezz"> Invítanos un café </a>
             </li>
 
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="https://github.com/arabenitezz"> Blog </a>
             </li>
           </ul>
         </nav>

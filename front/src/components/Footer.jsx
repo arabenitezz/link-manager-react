@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
       <a
         className="inline-block rounded-full bg-blue-600 p-2 text-white shadow transition hover:bg-blue-800 sm:p-3 lg:p-4"
-        href="#"
+        href="https://github.com/arabenitezz"
       >
         <span className="sr-only">Back to top</span>
 
@@ -31,7 +31,7 @@ const Footer = () => {
 
     <div className="lg:flex lg:items-end lg:justify-between">
       <div>
-        <a href='#'>
+        <a href='https://github.com/arabenitezz'>
         <div className="flex items-center gap-2 justify-center text-teal-600 lg:justify-start">
           <FontAwesomeIcon
                         icon={faLink}
@@ -52,7 +52,7 @@ const Footer = () => {
       >
         <li>
           <a
-            href="#"
+            href="https://github.com/arabenitezz"
             rel="noreferrer"
             target="_blank"
             className="text-gray-700 transition hover:opacity-75"
@@ -71,7 +71,7 @@ const Footer = () => {
 
         <li>
           <a
-            href="#"
+            href="https://github.com/arabenitezz"
             rel="noreferrer"
             target="_blank"
             className="text-gray-700 transition hover:opacity-75"
@@ -90,7 +90,7 @@ const Footer = () => {
 
         <li>
           <a
-            href="#"
+            href="https://github.com/arabenitezz"
             rel="noreferrer"
             target="_blank"
             className="text-gray-700 transition hover:opacity-75"
@@ -107,7 +107,7 @@ const Footer = () => {
 
         <li>
           <a
-            href="#"
+            href="https://github.com/arabenitezz"
             rel="noreferrer"
             target="_blank"
             className="text-gray-700 transition hover:opacity-75"
@@ -126,7 +126,7 @@ const Footer = () => {
 
         <li>
           <a
-            href="#"
+            href="https://github.com/arabenitezz"
             rel="noreferrer"
             target="_blank"
             className="text-gray-700 transition hover:opacity-75"
