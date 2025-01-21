@@ -2,6 +2,8 @@
 
 Un frontend moderno desarrollado con React y Tailwind CSS, con una estructura organizada para facilitar la escalabilidad y personalización.
 
+Aquí está el despliegue: https://link-manager-react.vercel.app/
+
 ## Estructura del Proyecto 📁
 
 ```
